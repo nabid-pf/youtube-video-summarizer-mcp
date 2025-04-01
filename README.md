@@ -46,10 +46,7 @@ To add the MCP server to Claude Desktop:
   "mcpServers": {
     "youtube": {
       "command": "npx",
-      "args": ["-y", "youtube-video-summarizer-mcp"],
-      "env": {
-        "YOUTUBE_API_KEY": "your_youtube_api_key_here"  # Optional
-      }
+      "args": ["-y", "youtube-video-summarizer-mcp"]
     }
   }
 }
@@ -60,16 +57,14 @@ To add the MCP server to Claude Desktop:
 When integrated with Claude, the following commands become available:
 
 - `get-video-info`: Get basic information about a YouTube video
-- `get-video-captions`: Get the captions/transcript of a YouTube video
-- `summarize-video`: Get video information and captions optimized for summarization
 
 ## Example Usage
 
 Once integrated with Claude Desktop, you can use natural language to request video summaries:
 
 - "Can you summarize this YouTube video for me? https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-- "What are the key points from this video: https://youtu.be/abc123"
-- "Create a comprehensive summary of this tutorial: [YouTube URL]"
+- "What are the key points from this video: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+- "Create a comprehensive summary of this tutorial: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
 ## For Developers
 
@@ -90,18 +85,9 @@ npm run build
 npm start
 ```
 
-### Environment Variables
-
-Create a `.env` file in the root directory with:
-
-```
-YOUTUBE_API_KEY=your_youtube_api_key_here  # Optional
-```
-
 ## How It Works
 
 This project uses:
-- `ytdl-core` to extract video metadata
 - `youtube-caption-extractor` to extract video captions/transcripts
 - The Model Context Protocol (MCP) to communicate with Claude
 

@@ -31,13 +31,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/youtube-video-summarizer-mcp.git"
+    "url": "git+https://github.com/nabid-pf/youtube-video-summarizer-mcp.git"
   },
-  "author": "Your Name <your.email@example.com>",
+  "author": "Nabid Salehin <nabid@peakflo.co>",
   "bugs": {
-    "url": "https://github.com/yourusername/youtube-video-summarizer-mcp/issues"
+    "url": "https://github.com/nabid-pf/youtube-video-summarizer-mcp/issues"
   },
-  "homepage": "https://github.com/yourusername/youtube-video-summarizer-mcp#readme",
+  "homepage": "https://github.com/nabid-pf/youtube-video-summarizer-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.0",
     "dotenv": "^16.4.7",

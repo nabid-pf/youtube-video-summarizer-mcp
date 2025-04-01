@@ -35,9 +35,9 @@ This guide will walk you through the process of publishing the YouTube Video Sum
    npm publish --access public
    ```
 
-   If you prefer to use a scoped package (e.g., @yourusername/youtube-video-summarizer-mcp):
+   If you prefer to use a scoped package (e.g., @nabid-pf/youtube-video-summarizer-mcp):
    ```bash
-   # Update package.json name to "@yourusername/youtube-video-summarizer-mcp" first
+   # Update package.json name to "@nabid-pf/youtube-video-summarizer-mcp" first
    npm publish --access public
    ```
 
