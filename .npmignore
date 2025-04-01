@@ -1,0 +1,38 @@
+# Source files
+src/
+
+# TypeScript config
+tsconfig.json
+
+# Development files
+.eslintrc*
+.prettierrc*
+.editorconfig
+.vscode/
+.idea/
+.git/
+.gitignore
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+
+# Documentation specific to development
+CLAUDE_INTEGRATION.md
+
+# Build process
+node_modules/
+coverage/
+.nyc_output/
+
+# Temporary files
+.DS_Store
+.tmp/
+temp/

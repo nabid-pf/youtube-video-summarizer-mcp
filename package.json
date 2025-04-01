@@ -1,0 +1,63 @@
+{
+  "name": "youtube-video-summarizer-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server for YouTube video summarization with Claude",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "youtube-video-summarizer": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "youtube",
+    "summarizer",
+    "claude",
+    "mcp",
+    "ai",
+    "video",
+    "transcript",
+    "captions"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/index.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "lint:fix": "eslint --fix",
+    "lint": "eslint .",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/youtube-video-summarizer-mcp.git"
+  },
+  "author": "Your Name <your.email@example.com>",
+  "bugs": {
+    "url": "https://github.com/yourusername/youtube-video-summarizer-mcp/issues"
+  },
+  "homepage": "https://github.com/yourusername/youtube-video-summarizer-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "dotenv": "^16.4.7",
+    "youtube-caption-extractor": "^1.4.3",
+    "ytdl-core": "^4.11.5",
+    "axios": "^1.6.8",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "globals": "^16.0.0",
+    "prettier": "3.5.3",
+    "shx": "^0.3.4",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
