@@ -23,12 +23,21 @@ const toolHandler = async (args: { videoUrl: string }, _extra: { signal: AbortSi
   }
 
   const videoInfo = response.result;
+  const captions = videoInfo?.subtitles?.map((subtitle) => subtitle.text).join(". ");
+
+  if (!captions) {
+    return {
+      content: [
+        { type: "text" as const, text: "No captions found" },
+      ],
+    };
+  }
 
   return {
     content: [
       {
         type: "text" as const,
-        text: `Title: ${videoInfo?.title}\n\nDescription: ${videoInfo?.description}\n\nSubtitles: ${videoInfo?.subtitles}`,
+        text: `Title: ${videoInfo?.title}\n\nDescription: ${videoInfo?.description}\n\nCaption: ${captions}`,
       },
     ],
   };
