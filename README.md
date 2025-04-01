@@ -12,28 +12,6 @@ An MCP (Model Context Protocol) server that enables Claude to fetch and summariz
 - Provide structured data to Claude for comprehensive video summarization
 - Works with Claude Desktop through MCP integration
 
-## Installation
-
-### Global Installation (Recommended for Claude Desktop)
-
-```bash
-# Install globally
-npm install -g youtube-video-summarizer-mcp
-
-# Run directly
-youtube-video-summarizer
-```
-
-### Local Installation
-
-```bash
-# Install locally
-npm install youtube-video-summarizer-mcp
-
-# Run with npx
-npx youtube-video-summarizer-mcp
-```
-
 ## Integrating with Claude Desktop
 
 To add the MCP server to Claude Desktop:
