@@ -5,9 +5,9 @@ import { formatError } from "../helpers/format-error.js";
 /**
  * Get information about a YouTube video
  */
-export async function getYouTubeVideoInfo(videoUrl: string): Promise<ToolResponse<VideoInfo>> {
+export async function getYouTubeVideoInfo(videoUrl: string, language: string): Promise<ToolResponse<VideoInfo>> {
   try {
-    const videoInfo = await youtubeClient.getVideoInfo(videoUrl);
+    const videoInfo = await youtubeClient.getVideoInfo(videoUrl, language);
     
     return {
       result: videoInfo,
