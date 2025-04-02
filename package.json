@@ -1,6 +1,6 @@
 {
   "name": "youtube-video-summarizer-mcp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An MCP server for YouTube video summarization with Claude",
   "license": "MIT",
   "main": "dist/index.js",
