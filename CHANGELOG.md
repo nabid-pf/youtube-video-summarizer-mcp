@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of YouTube Video Summarizer MCP
 - Three core tools for Claude integration:
-  - `get-video-info`: Extract video metadata
+  - `get-video-info-for-summary-from-url`: Extract video metadata
 - Support for YouTube URL parsing in various formats
 - Automatic language detection with fallback to auto-generated captions
 - MCP server integration with Claude Desktop

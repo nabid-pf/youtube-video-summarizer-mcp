@@ -70,7 +70,7 @@ Once published, users can integrate with Claude Desktop by adding to their claud
 ```json
 {
   "mcpServers": {
-    "youtube": {
+    "youtube-video-summarizer": {
       "command": "npx",
       "args": ["-y", "youtube-video-summarizer-mcp"],
       "env": {

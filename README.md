@@ -25,7 +25,7 @@ To add the MCP server to Claude Desktop:
 ```json
 {
   "mcpServers": {
-    "youtube": {
+    "youtube-video-summarizer": {
       "command": "npx",
       "args": ["-y", "youtube-video-summarizer-mcp"]
     }
@@ -37,7 +37,7 @@ To add the MCP server to Claude Desktop:
 
 When integrated with Claude, the following commands become available:
 
-- `get-video-info`: Get basic information about a YouTube video
+- `get-video-info-for-summary-from-url`: Get basic information about a YouTube video
 
 ## Example Usage
 
