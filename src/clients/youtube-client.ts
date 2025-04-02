@@ -1,5 +1,6 @@
 import { getVideoDetails, VideoDetails } from "youtube-caption-extractor";
 import dotenv from "dotenv";
+import { isLanguageCodeValid } from "./language-codes.js";
 
 dotenv.config();
 
@@ -51,10 +52,16 @@ export class YouTubeClient {
   /**
    * Get video information and captions using youtube-caption-extractor
    */
-  public async getVideoInfo(videoIdOrUrl: string, lang = "en"): Promise<VideoDetails> {
+  public async getVideoInfo(videoIdOrUrl: string, lang?: string): Promise<VideoDetails> {
     try {
+      // Extract video ID from URL
       const videoId = this.extractVideoId(videoIdOrUrl);
-      const videoDetails = await getVideoDetails({ videoID: videoId, lang });
+      // check if lang is valid
+      let languageCode = lang;
+      if (!isLanguageCodeValid(lang)) {
+        languageCode = undefined;
+      }
+      const videoDetails = await getVideoDetails({ videoID: videoId, lang: languageCode });
       return videoDetails;
     } catch (error) {
       console.error("Error getting video info:", error);
