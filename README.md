@@ -12,6 +12,9 @@ An MCP (Model Context Protocol) server that enables Claude to fetch and summariz
 - Provide structured data to Claude for comprehensive video summarization
 - Works with Claude Desktop through MCP integration
 
+## Prerequisites
+- Node.js (v18 or higher)
+
 ## Integrating with Claude Desktop
 
 To add the MCP server to Claude Desktop:
@@ -59,9 +62,14 @@ npm install
 # Build the project
 npm run build
 
-# Start the server
-npm start
+# Start the inspector
+npx @modelcontextprotocol/inspector node dist/index.js
 ```
+### Run tool
+- Click connect
+- Select the tool to run
+- Put video url in the field
+- Click run
 
 ## How It Works
 
