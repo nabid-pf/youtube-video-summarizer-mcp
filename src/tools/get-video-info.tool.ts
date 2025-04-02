@@ -2,15 +2,15 @@ import { z } from "zod";
 import { getYouTubeVideoInfo } from "../handlers/get-video-info.handler.js";
 import { ToolDefinition } from "../types/tool-definition.js";
 
-const toolName = "get-video-info-for-summary-from-url-and-language";
+const toolName = "get-video-info-for-summary-from-url-and-language-code";
 const toolDescription = "Get title, description, duration, and captions for a YouTube video in a specific language from a URL";
 const toolSchema = {
   videoUrl: z.string().describe("The URL or ID of the YouTube video"),
-  language: z.string().describe("The language of the video"),
+  languageCode: z.string().describe("The language code of the video"),
 };
 
-const toolHandler = async (args: { videoUrl: string; language: string }, _extra: { signal: AbortSignal }) => {
-  const response = await getYouTubeVideoInfo(args.videoUrl, args.language);
+const toolHandler = async (args: { videoUrl: string; languageCode: string }, _extra: { signal: AbortSignal }) => {
+  const response = await getYouTubeVideoInfo(args.videoUrl, args.languageCode);
 
   if (response.isError) {
     return {
