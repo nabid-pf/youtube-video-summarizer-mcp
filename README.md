@@ -4,6 +4,7 @@ An MCP (Model Context Protocol) server that enables Claude to fetch and summariz
 
 [![npm version](https://img.shields.io/npm/v/youtube-video-summarizer-mcp.svg)](https://www.npmjs.com/package/youtube-video-summarizer-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![smithery badge](https://smithery.ai/badge/@nabid-pf/youtube-video-summarizer-mcp)](https://smithery.ai/server/@nabid-pf/youtube-video-summarizer-mcp)
 
 ## Features
 
