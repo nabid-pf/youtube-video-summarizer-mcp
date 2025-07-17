@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/nabid-pf-youtube-video-summarizer-mcp-badge.png)](https://mseep.ai/app/nabid-pf-youtube-video-summarizer-mcp)
+
 # YouTube Video Summarizer MCP
 
 An MCP (Model Context Protocol) server that enables Claude to fetch and summarize YouTube videos by extracting titles, descriptions, and transcripts.
