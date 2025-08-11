@@ -1,11 +1,10 @@
-import { ToolCallback } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { ZodRawShape } from "zod";
 
 export interface ToolDefinition<Args extends ZodRawShape> {
   name: string;
   description: string;
   schema: Args;
-  handler: ToolCallback<Args>;
+  handler: (args: any, extra: any) => Promise<any>;
 }
 
 export interface ToolResponse<T> {
