@@ -56,7 +56,7 @@ Once integrated with Claude Desktop, you can use natural language to request vid
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/youtube-video-summarizer-mcp.git
+git clone https://github.com/nabid-pf/youtube-video-summarizer-mcp.git
 cd youtube-video-summarizer-mcp
 
 # Install dependencies

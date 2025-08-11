@@ -21,7 +21,7 @@ console.error(`
 // Log startup information (to stderr so it doesn't interfere with MCP protocol)
 console.error("Starting YouTube Video Summarizer MCP Server...");
 console.error("This server enables Claude to analyze and summarize YouTube videos.");
-console.error("For more information, visit: https://github.com/yourusername/youtube-video-summarizer-mcp");
+console.error("For more information, visit: https://github.com/nabid-pf/youtube-video-summarizer-mcp");
 console.error("\nWaiting for Claude to connect...\n");
 
 const main = async () => {
@@ -36,7 +36,7 @@ const main = async () => {
 
   // Start receiving messages on stdin and sending messages on stdout
   const transport = new StdioServerTransport();
-  console.error("Server ready. Connecting to Claude...")
+  console.error("Server ready!!!")
   await server.connect(transport);
 };
 
