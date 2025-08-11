@@ -14,7 +14,12 @@ async function main() {
   try {
     const result = await GetVideoInfoTool.handler(
       { videoUrl: videoUrlArg, languageCode: languageCodeArg },
-      { signal: new AbortController().signal }
+      { 
+        signal: new AbortController().signal,
+        requestId: "test-request",
+        sendNotification: async () => Promise.resolve(),
+        sendRequest: async () => Promise.resolve({} as any)
+      }
     );
 
     console.log(JSON.stringify(result, null, 2));
