@@ -2,7 +2,7 @@
 
 # YouTube Video Summarizer MCP
 
-An MCP (Model Context Protocol) server that enables Claude to fetch and summarize YouTube videos by extracting titles, descriptions, and transcripts.
+An MCP (Model Context Protocol) server that enables client to fetch and summarize details YouTube videos.
 
 [![npm version](https://img.shields.io/npm/v/youtube-video-summarizer-mcp.svg)](https://www.npmjs.com/package/youtube-video-summarizer-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
