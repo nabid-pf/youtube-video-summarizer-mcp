@@ -1,6 +1,6 @@
 {
   "name": "youtube-video-summarizer-mcp",
-  "version": "1.8.5",
+  "version": "1.8.6",
   "description": "An MCP server for YouTube video summarization",
   "license": "MIT",
   "main": "dist/index.js",
