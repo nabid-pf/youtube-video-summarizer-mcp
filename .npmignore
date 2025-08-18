@@ -24,8 +24,6 @@ yarn-error.log*
 .env
 .env.*
 
-# Documentation specific to development
-CLAUDE_INTEGRATION.md
 
 # Build process
 node_modules/

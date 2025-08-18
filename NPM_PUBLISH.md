@@ -63,19 +63,16 @@ This guide will walk you through the process of publishing the YouTube Video Sum
    npm publish
    ```
 
-## Integration with Claude Desktop
+## Integration with MCP Clients
 
-Once published, users can integrate with Claude Desktop by adding to their claude_desktop_config.json:
+Can be integrated with any MCP client by adding to their configuration file:
 
 ```json
 {
   "mcpServers": {
     "youtube-video-summarizer": {
       "command": "npx",
-      "args": ["-y", "youtube-video-summarizer-mcp"],
-      "env": {
-        "YOUTUBE_API_KEY": "optional_youtube_api_key"
-      }
+      "args": ["-y", "youtube-video-summarizer-mcp"]
     }
   }
 }

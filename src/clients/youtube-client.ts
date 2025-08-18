@@ -8,12 +8,6 @@ dotenv.config();
 export type VideoInfo = VideoDetails;
 
 export class YouTubeClient {
-  private apiKey: string | undefined;
-
-  constructor() {
-    this.apiKey = process.env.YOUTUBE_API_KEY;
-  }
-
   /**
    * Extract video ID from YouTube URL
    */
@@ -64,7 +58,6 @@ export class YouTubeClient {
       const videoDetails = await getVideoDetails({ videoID: videoId, lang: languageCode });
       return videoDetails;
     } catch (error) {
-      console.error("Error getting video info:", error);
       throw new Error(`Failed to get video info: ${(error as Error).message}`);
     }
   }

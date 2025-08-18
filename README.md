@@ -1,85 +1,80 @@
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/nabid-pf-youtube-video-summarizer-mcp-badge.png)](https://mseep.ai/app/nabid-pf-youtube-video-summarizer-mcp)
 
-# YouTube Video Summarizer MCP
+# YouTube Video Summarizer MCP Server
 
-An MCP (Model Context Protocol) server that enables client to fetch and summarize details YouTube videos.
-
-[![npm version](https://img.shields.io/npm/v/youtube-video-summarizer-mcp.svg)](https://www.npmjs.com/package/youtube-video-summarizer-mcp)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![smithery badge](https://smithery.ai/badge/@nabid-pf/youtube-video-summarizer-mcp)](https://smithery.ai/server/@nabid-pf/youtube-video-summarizer-mcp)
+An MCP (Model Context Protocol) server that enables AI assistants to analyze and summarize YouTube videos by extracting captions, descriptions, and metadata.
 
 ## Features
 
-- Extract YouTube video metadata (title, description, duration)
-- Retrieve and process video captions using youtube-caption-extractor
-- Provide structured data to Claude for comprehensive video summarization
-- Works with Claude Desktop through MCP integration
+- Extract video captions/subtitles in multiple languages
+- Retrieve comprehensive video metadata (title, description, duration)
+- Provide structured data to AI assistants for comprehensive video summarization
+- Works with any MCP-compatible client through MCP integration
+- Support for multiple YouTube URL formats
+- Language-specific caption extraction
 
-## Prerequisites
-- Node.js (v18 or higher)
+## Integrating with MCP Clients
 
-## Integrating with Claude Desktop
+To add the MCP server to your MCP client:
 
-To add the MCP server to Claude Desktop:
-
-1. Go to Settings > Developer > Edit config
-2. Add the following to your claude_desktop_config.json file:
+1. Install the package globally: `npm install -g youtube-video-summarizer-mcp`
+2. Add the following to your MCP client configuration file:
 
 ```json
 {
   "mcpServers": {
     "youtube-video-summarizer": {
-      "command": "npx",
-      "args": ["-y", "youtube-video-summarizer-mcp"]
+      "command": "youtube-video-summarizer",
+      "args": []
     }
   }
 }
 ```
 
-## Available MCP Commands
+## Available Tools
 
-When integrated with Claude, the following commands become available:
+When integrated with an MCP client, the following commands become available:
 
-- `get-video-info-for-summary-from-url`: Get basic information about a YouTube video
+- **get-video-info-for-summary-from-url**: Extract video information and captions from a YouTube URL
+- **get-video-captions**: Get captions/subtitles for a specific video
+- **get-video-metadata**: Retrieve comprehensive video metadata
 
-## Example Usage
+## Usage Examples
 
-Once integrated with Claude Desktop, you can use natural language to request video summaries:
+Once integrated with your MCP client, you can use natural language to request video summaries:
 
-- "Can you summarize this YouTube video for me? https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-- "What are the key points from this video: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-- "Create a comprehensive summary of this tutorial: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+```
+"Can you summarize this YouTube video: https://youtube.com/watch?v=VIDEO_ID"
+"What are the main points from this video's captions?"
+"Extract the key information from this YouTube link"
+```
 
-## For Developers
-
-### Building from Source
+## Installation
 
 ```bash
-# Clone the repository
+npm install -g youtube-video-summarizer-mcp
+```
+
+## Development
+
+```bash
 git clone https://github.com/nabid-pf/youtube-video-summarizer-mcp.git
 cd youtube-video-summarizer-mcp
-
-# Install dependencies
 npm install
-
-# Build the project
 npm run build
-
-# Start the inspector
-npx @modelcontextprotocol/inspector node dist/index.js
 ```
-### Run tool
-- Click connect
-- Select the tool to run
-- Put video url in the field
-- Click run
 
 ## How It Works
 
-This project uses:
-- `youtube-caption-extractor` to extract video captions/transcripts
-- The Model Context Protocol (MCP) to communicate with Claude
+1. **URL Parsing**: Extracts video IDs from various YouTube URL formats
+2. **Caption Extraction**: Uses youtube-caption-extractor to get subtitles
+3. **Metadata Retrieval**: Fetches video title, description, and other details
+4. **MCP Integration**: The Model Context Protocol (MCP) to communicate with AI assistants
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the LICENSE file for details.
