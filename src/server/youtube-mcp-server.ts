@@ -10,9 +10,6 @@ export class YouTubeMcpServer {
       YouTubeMcpServer.instance = new McpServer({
         name: "YouTube Video Summariser",
         version: "1.0.0",
-        capabilities: {
-          tools: {},
-        },
       });
     }
     return YouTubeMcpServer.instance;

@@ -15,9 +15,32 @@ An MCP (Model Context Protocol) server that enables AI assistants to analyze and
 
 ## Integrating with MCP Clients
 
-To add the MCP server to your MCP client:
+To add the MCP server to your MCP client, you can use either method:
 
-1. Install the package globally: `npm install -g youtube-video-summarizer-mcp`
+### Option 1: Using npx (No Installation Required)
+
+Add the following to your MCP client configuration file:
+
+```json
+{
+  "mcpServers": {
+    "youtube-video-summarizer": {
+      "command": "npx",
+      "args": ["-y", "youtube-video-summarizer-mcp"]
+    }
+  }
+}
+```
+
+The server automatically filters out any npm/npx output to ensure MCP protocol compliance.
+
+### Option 2: Global Installation (Recommended for Production)
+
+1. Install the package globally:
+   ```bash
+   npm install -g youtube-video-summarizer-mcp
+   ```
+
 2. Add the following to your MCP client configuration file:
 
 ```json

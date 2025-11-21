@@ -41,10 +41,7 @@
   "homepage": "https://github.com/nabid-pf/youtube-video-summarizer-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.2",
-    "axios": "^1.6.8",
-    "dotenv": "^17.2.1",
     "youtube-caption-extractor": "^1.8.2",
-    "ytdl-core": "^4.11.5",
     "zod": "^3.25.76"
   },
   "devDependencies": {

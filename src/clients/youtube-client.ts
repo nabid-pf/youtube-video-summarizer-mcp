@@ -1,8 +1,5 @@
 import { getVideoDetails, VideoDetails } from "youtube-caption-extractor";
-import dotenv from "dotenv";
 import { isLanguageCodeValid } from "./language-codes.js";
-
-dotenv.config();
 
 // Re-export VideoDetails for use in other modules
 export type VideoInfo = VideoDetails;

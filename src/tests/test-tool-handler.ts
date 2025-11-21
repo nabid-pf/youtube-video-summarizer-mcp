@@ -1,7 +1,4 @@
-import dotenv from "dotenv";
 import { GetVideoInfoTool } from "../tools/get-video-info.tool.js";
-
-dotenv.config();
 
 async function main() {
   const [, , videoUrlArg, languageCodeArg] = process.argv;

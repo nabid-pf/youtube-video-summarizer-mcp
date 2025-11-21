@@ -1,7 +1,4 @@
-import dotenv from "dotenv";
 import { getYouTubeVideoInfo } from "../handlers/get-video-info.handler.js";
-
-dotenv.config();
 
 async function main() {
   const [, , videoUrlArg, languageCodeArg] = process.argv;
