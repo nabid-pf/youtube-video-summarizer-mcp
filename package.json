@@ -41,7 +41,7 @@
   "homepage": "https://github.com/nabid-pf/youtube-video-summarizer-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.2",
-    "youtube-caption-extractor": "^1.8.2",
+    "youtube-caption-extractor": "1.9.1",
     "zod": "^3.25.76"
   },
   "devDependencies": {
